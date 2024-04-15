@@ -3,10 +3,12 @@ const axios = require("axios");
 const getApi = (req, res) => {
   axios.get("https://www.vpngate.net/api/iphone/")
     .then((result) => {
+      console.log("result => ",result);
+      console.log("result Data => ",result.data);
       res.status(200).json({
         success: true,
         message: "Done",
-        vpn: JSON.stringify(result) // Use result.data to access the response data
+        vpn: result // Use result.data to access the response data
       });
     })
     .catch((err) => {
