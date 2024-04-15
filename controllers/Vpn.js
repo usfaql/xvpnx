@@ -4,9 +4,7 @@ const getApi = (req, res) => {
   axios.get("https://www.vpngate.net/api/iphone/")
     .then((result) => {
       res.status(200).json({
-        success: true,
-        message: "Done",
-        result : result.data // Use result.data to access the response data
+        message : result.data // Use result.data to access the response data
       });
     })
     .catch((err) => {
