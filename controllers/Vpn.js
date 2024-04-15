@@ -6,7 +6,7 @@ const getApi = (req, res) => {
       res.status(200).json({
         success: true,
         message: "Done",
-        vpn: result.data // Use result.data to access the response data
+        result : result.data // Use result.data to access the response data
       });
     })
     .catch((err) => {
