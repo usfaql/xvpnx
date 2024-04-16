@@ -3,6 +3,7 @@ const axios = require("axios");
 const getApi = (req, res) => {
   axios.get("https://www.vpngate.net/api/iphone/")
     .then((result) => {
+      res.type('text/plain');
       res.send(result.data);
     })
     .catch((err) => {
